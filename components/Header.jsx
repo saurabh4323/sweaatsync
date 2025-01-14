@@ -17,22 +17,22 @@ const Header = () => {
             Home
           </Link>
           <Link href="/about" className="nav-link">
-            About
+            DashBoard
           </Link>
           <Link href="/classes" className="nav-link">
-            Classes
+            Tracking
           </Link>
           <Link href="/trainers" className="nav-link">
-            Trainers
+            Calories
           </Link>
           <Link href="/pricing" className="nav-link">
-            Pricing
+            Achievement
           </Link>
           <Link href="/blog" className="nav-link">
-            Blog
+            Games
           </Link>
           <Link href="/contact" className="nav-link">
-            Contact
+            Profile
           </Link>
         </nav>
       </div>
