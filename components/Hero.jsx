@@ -7,13 +7,18 @@ const Hero = () => {
       <div
         className="imageleft"
         style={{
+          background: "rgba(2, 0, 36, 0.2)",
+          background:
+            "linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 128, 1) 35%, rgba(255, 20, 147, 1) 70%, rgba(0, 0, 0, 1) 100%)",
+
           position: "absolute",
           right: "0",
           top: "0",
+
+          width: "60%",
+          height: "100vh",
         }}
-      >
-        <Image src={"/sec.webp"} width={500} height={750} />
-      </div>
+      ></div>
 
       <div className={styles.overlayText}>
         <span>SWEAT</span>

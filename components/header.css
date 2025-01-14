@@ -4,10 +4,11 @@
   top: 30px;
   left: 0;
   width: 100%;
+  background-color: transparent;
   color: white;
   padding: 10px 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .container {

@@ -1,6 +1,7 @@
 .heroContainer {
   position: relative;
-  height: 110vh;
+  z-index: 0;
+  height: 100vh;
   overflow: hidden;
   text-align: center;
   color: white;
@@ -20,19 +21,20 @@
 
 .overlayText {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
+
   transform: translate(-50%, -50%);
   font-size: 20vw;
   font-weight: 800;
-  line-height: 0.8;
+  line-height: 0.75;
   text-transform: uppercase;
   color: transparent;
   text-align: center;
-  background: url("https://preview.colorlib.com/theme/crossbody/images/bg_1.jpg.webp")
+  background: url("https://preview.colorlib.com/theme/fitzone/assets/images/banner-bg.jpg.webp")
     no-repeat center center;
   background-size: cover;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   background-clip: text;
 }
 
@@ -41,6 +43,7 @@
 }
 
 .subtitle {
+  text-transform: uppercase;
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -59,8 +62,7 @@
   text-transform: uppercase;
   color: transparent;
   text-align: center;
-  background: url("https://preview.colorlib.com/theme/crossbody/images/logo-bg.jpg.webp")
-    no-repeat center center;
+  background: url("https://preview.colorlib.com/theme/fitzone/assets/images/banner-bg.jpg.webp");
   background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
