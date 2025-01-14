@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        {/* Logo */}
         <div className="logo">
           <div className={styles.overlayTex}>
             <span>SWEAT SYNC</span>
@@ -13,7 +12,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Navigation */}
         <nav className="navigation">
           <Link href="/" className="nav-link">
             Home
