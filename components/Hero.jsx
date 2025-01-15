@@ -61,12 +61,13 @@ const Hero = () => {
       <div
         className="parall"
         style={{
-          zIndex: "-1",
           height: "100vh",
+
           width: "100%",
           backgroundColor: "#050505",
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          // justifyContent: "center",
           alignItems: "center",
           gap: "20px",
           flexWrap: "wrap",
@@ -80,114 +81,129 @@ const Hero = () => {
               "linear-gradient(-90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 128, 1) 35%, rgba(255, 20, 147, 1) 70%, rgba(0, 0, 0, 1) 100%)",
             position: "absolute",
             left: "0",
+
             width: "60%",
             height: "100vh",
+            zIndex: "1", // Ensure this is behind the text
           }}
         ></div>
-        {/* Card 1 */}
-        <motion.div
-          className="card"
-          style={{
-            backgroundColor: "#000063",
-            width: "200px",
-            height: "250px",
-            borderRadius: "30px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            y: cardY,
-          }}
-          whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-          onClick={() => alert("Card 1 Clicked!")}
+        <div className="text" style={{ zIndex: "10", textAlign: "center" }}>
+          <h2 style={{ color: "#fff", fontSize: "2.5rem", marginTop: "10%" }}>
+            Sync Goals
+          </h2>
+          <p style={{ color: "#ccc", fontSize: "1.2rem", marginTop: "10px" }}>
+            Track progress, stay motivated, analyze data, visualize success,
+            achieve goals
+          </p>
+        </div>
+        <div
+          className="boxi"
+          style={{ display: "flex", gap: "20px", zIndex: "1000000" }}
         >
-          Track Your Progress
-        </motion.div>
-        {/* Card 2 */}
-        <motion.div
-          className="card"
-          style={{
-            backgroundColor: "#4704cf",
-            width: "200px",
-            height: "200px",
-            borderRadius: "25px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            y: cardY,
-          }}
-          whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-          onClick={() => alert("Card 2 Clicked!")}
-        >
-          Export & Analyze
-        </motion.div>
-        {/* Card 3 */}
-        <motion.div
-          className="card"
-          style={{
-            backgroundColor: "#c71073",
-            width: "200px",
-            height: "200px",
-            borderRadius: "50%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            y: cardY,
-          }}
-          whileHover={{
-            scale: 1.1,
-            rotate: 60, // Adjust the rotation degree as needed
-            transition: { duration: 0.3 },
-          }}
-          onClick={() => alert("Card 3 Clicked!")}
-        >
-          Visualize Your Journey
-        </motion.div>
-        {/* Card 4 */}
-        <motion.div
-          className="card"
-          style={{
-            backgroundColor: "#4704cf",
-            width: "200px",
-            height: "200px",
-            borderRadius: "25px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            y: cardY,
-          }}
-          whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-          onClick={() => alert("Card 4 Clicked!")}
-        >
-          Stay Motivated
-        </motion.div>
-        {/* Card 5 */}
-        <motion.div
-          className="card"
-          style={{
-            backgroundColor: "#000063",
-            width: "200px",
-            height: "250px",
-            borderRadius: "30px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            y: cardY,
-          }}
-          whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-          onClick={() => alert("Card 5 Clicked!")}
-        >
-          Achieve Your Goals
-        </motion.div>
+          <motion.div
+            className="card"
+            style={{
+              backgroundColor: "#000063",
+              width: "200px",
+              height: "250px",
+              borderRadius: "30px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+              y: cardY,
+            }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            onClick={() => alert("Card 1 Clicked!")}
+          >
+            Track Your Progress
+          </motion.div>
+          {/* Card 2 */}
+          <motion.div
+            className="card"
+            style={{
+              backgroundColor: "#4704cf",
+              width: "200px",
+              height: "200px",
+              borderRadius: "25px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+              y: cardY,
+            }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            onClick={() => alert("Card 2 Clicked!")}
+          >
+            Export & Analyze
+          </motion.div>
+          {/* Card 3 */}
+          <motion.div
+            className="card"
+            style={{
+              backgroundColor: "#c71073",
+              width: "200px",
+              height: "200px",
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+              y: cardY,
+            }}
+            whileHover={{
+              scale: 1.1,
+              rotate: 60, // Adjust the rotation degree as needed
+              transition: { duration: 0.3 },
+            }}
+            onClick={() => alert("Card 3 Clicked!")}
+          >
+            Visualize Your Journey
+          </motion.div>
+          {/* Card 4 */}
+          <motion.div
+            className="card"
+            style={{
+              backgroundColor: "#4704cf",
+              width: "200px",
+              height: "200px",
+              borderRadius: "25px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+              y: cardY,
+            }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            onClick={() => alert("Card 4 Clicked!")}
+          >
+            Stay Motivated
+          </motion.div>
+          {/* Card 5 */}
+          <motion.div
+            className="card"
+            style={{
+              backgroundColor: "#000063",
+              width: "200px",
+              height: "250px",
+              borderRadius: "30px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+              y: cardY,
+            }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            onClick={() => alert("Card 5 Clicked!")}
+          >
+            Achieve Your Goals
+          </motion.div>
+        </div>
       </div>
     </div>
   );
