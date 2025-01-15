@@ -1,23 +1,12 @@
 .heroContainer {
-  position: relative;
+  position: sticky;
   z-index: 0;
-  height: 110vh;
+  top: 0;
+  height: 100vh;
   overflow: hidden;
   text-align: center;
   color: white;
   background-color: #000;
-}
-
-.parallaxImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -1;
 }
 
 .overlayText {
@@ -67,10 +56,11 @@
   text-transform: uppercase;
   color: transparent;
   text-align: center;
-  background: url("https://preview.colorlib.com/theme/fitzone/assets/images/banner-bg.jpg.webp");
+  /* background: url("https://preview.colorlib.com/theme/fitzone/assets/images/banner-bg.jpg.webp"); */
   background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
+  color: #e650c0;
 }
 
 .overlayTex span {

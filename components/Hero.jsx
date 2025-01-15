@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+// import { motion } from "motion/react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import styles from "./Hero.module.css";
 import Image from "next/image";
@@ -58,7 +59,7 @@ const Hero = () => {
   const cardY = useTransform(scrollYProgress, [0, 1], [90, -110]); // Moves the cards as you scroll
   const overlayTextYz = useTransform(scrollYProgress, [0, 1], [-20, 50]);
   return (
-    <div className="hitbox">
+    <div className="hitbox" style={{ position: "relative" }}>
       <div className={styles.heroContainer}>
         <motion.div
           className="imageleft"
@@ -85,7 +86,7 @@ const Hero = () => {
         >
           <motion.div
             className={styles.overlayText}
-            style={{ y: overlayTextY }}
+            // style={{ y: overlayTextY }}
           >
             <span>SWEAT</span>
             <span>SYNC</span>
@@ -109,7 +110,7 @@ const Hero = () => {
         className="parall"
         style={{
           height: "100vh",
-
+          position: "relative",
           width: "100%",
           backgroundColor: "#050505",
           display: "flex",
@@ -148,7 +149,12 @@ const Hero = () => {
         </motion.div>
         <div
           className="boxi"
-          style={{ display: "flex", gap: "20px", zIndex: "1000000" }}
+          style={{
+            display: "flex",
+            width: "88%",
+            justifyContent: "space-between",
+            zIndex: "1000000",
+          }}
         >
           <motion.div
             className="card"
