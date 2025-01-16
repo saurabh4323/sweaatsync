@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  color: rgb(255, 255, 255);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem;
+  gap: 2rem;
+  /* background-color: #f7f7f7; */
+  border-radius: 15px;
+}
+
+.leftSection,
+.rightSection {
+  padding: 20px;
+  flex: 1;
+  background: #4704cf;
+  border: 1px solid #fff;
+  display: flex;
+  border-radius: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  text-transform: uppercase;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-weight: 500;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.habit {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkmark {
+  font-size: 1.5rem;
+  color: green;
+}
+
+.checkmark:nth-child(4) {
+  color: red;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  margin: auto;
+  width: 70%;
+  height: auto;
+  border-radius: 12px;
+}
+.image:hover {
+  transform: scale(1.1);
+}

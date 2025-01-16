@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import Heropart2 from "@/components/Heropart2";
 import Heropart3 from "@/components/Heropart3";
 import Page from "../app/calories/page";
+import SustainableHabits from "@/components/C";
+// import Heropart4 from "@/components/heropart4";
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
 
@@ -37,7 +39,12 @@ export default function Home() {
         <Hero />
       </div>
       <Heropart2 />
+      {/* <Heropart4></Heropart4> */}
       <Heropart3 />
+      <div className="dii" style={{ marginTop: "30%" }}>
+        {" "}
+        <SustainableHabits></SustainableHabits>
+      </div>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import styles from "./Hero.module.css";
 import Image from "next/image";
 import WellnessHub from "./Wellnesshub";
+import SustainableHabits from "./C";
 
 const Heropart3 = () => {
   // Parallax Effect
@@ -22,7 +23,7 @@ const Heropart3 = () => {
           right: "0",
 
           width: "80%",
-          height: "100vh",
+          height: "190vh",
           zIndex: "-1", // Ensure this is behind the text
         }}
       ></div>
