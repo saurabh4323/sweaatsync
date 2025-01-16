@@ -1,0 +1,35 @@
+/* Add this to your CSS file */
+.counter-container {
+  /* width: 100%; */
+  width: 100%; /* 6xl in Tailwind */
+
+  padding: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* gap-8 in Tailwind */
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.25rem; /* text-4xl in Tailwind */
+  font-weight: 700; /* font-bold in Tailwind */
+  margin-bottom: 0.5rem; /* mb-2 in Tailwind */
+}
+
+.stat-label {
+  font-size: 1.125rem; /* text-lg in Tailwind */
+  color: #4b5563; /* text-gray-600 in Tailwind */
+}
+
+/* Media query for responsive design */
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 in Tailwind */
+  }
+}

@@ -1,0 +1,175 @@
+/* nutrition-search.css */
+.main-container {
+  margin-top: 40px;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    padding: 4rem 1rem;
+  }
+}
+
+.content-wrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.page-title {
+  z-index: 100000;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+.search-form {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.search-input-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #9882c1;
+  backdrop-filter: blur(4px);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.125rem;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.search-button:hover {
+  opacity: 0.9;
+}
+
+.search-button:disabled {
+  opacity: 0.5;
+}
+
+.error-message {
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.food-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nutrient-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nutrient-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.nutrient-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: #9882c1;
+  backdrop-filter: blur(4px);
+  transition: box-shadow 0.2s;
+}
+
+.nutrient-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.nutrient-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.nutrient-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.additional-nutrients {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.nutrients-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nutrients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nutrients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.nutrient-item {
+  font-size: 0.875rem;
+}
+
+.nutrient-label {
+  font-weight: 500;
+}

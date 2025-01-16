@@ -4,7 +4,15 @@
   top: 30px;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  /* background-color: transparent; */
+  /* background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 128, 1) 35%,
+    rgba(255, 20, 147, 1) 70%,
+    rgba(0, 0, 0, 1) 100%
+  ); */
+  /* background: #021ed4; */
   color: white;
   padding: 10px 0;
   z-index: 4;
@@ -12,27 +20,41 @@
 }
 
 .container {
+  width: 100%;
+  /* background: #1db8c0; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .logo h1 {
+  width: 40%;
   font-size: 24px;
   font-weight: bold;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .navigation {
-  width: 500px;
+  width: 60%;
+  /* background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 128, 1) 35%,
+    rgba(255, 20, 147, 1) 70%,
+    rgba(0, 0, 0, 1) 100%
+  ); */
+  /* background: #ef3030; */
+  height: 20px;
+  /* width: 500px; */
   display: flex;
   gap: 40px;
 }
 
 .nav-link {
+  /* background: #17da9c; */
   color: white;
   text-decoration: none;
   font-size: 16px;

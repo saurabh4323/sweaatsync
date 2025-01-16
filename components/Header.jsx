@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <div className={styles.overlayTex}>
+          <div className={styles.overlayTa}>
             <span>SWEAT SYNC</span>
             {/* <span></span> */}
           </div>
@@ -22,7 +22,7 @@ const Header = () => {
           <Link href="/classes" className="nav-link">
             Tracking
           </Link>
-          <Link href="/trainers" className="nav-link">
+          <Link href="/calories" className="nav-link">
             Calories
           </Link>
           <Link href="/pricing" className="nav-link">
