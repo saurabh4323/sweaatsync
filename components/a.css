@@ -1,0 +1,279 @@
+.containerk {
+  /* margin-top: 40px; */
+  padding: 2rem;
+  background: linear-gradient(
+    140deg,
+    #0a0910 0%,
+    #170b1d 25%,
+    #331b47 50%,
+    #1f0b3b 75%,
+    #190b35 100%
+  );
+
+  color: #fff;
+}
+
+.content-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.content-wrapper > * + * {
+  margin-top: 2rem;
+}
+
+.headera {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.progress-bar {
+  width: 8rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #10b981;
+}
+
+.progress-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.stat-value-wrapper {
+  margin-top: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-unit {
+  font-size: 0.875rem;
+  color: #fff;
+  margin-left: 0.25rem;
+}
+
+.activity-card {
+  border-radius: 1rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.activity-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.activity-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+}
+
+.activity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.activity-week {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.activity-day {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.activity-day:hover {
+  transform: scale(1.5);
+}
+
+.badges-card {
+  border-radius: 1rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.badges-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .badges-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.badge-card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.badge-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.25rem);
+}
+
+.badge-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.badge-icon {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.badge-icon.gold {
+  border: 2px solid #f59e0b;
+}
+
+.badge-icon.silver {
+  border: 2px solid #d1d5db;
+}
+
+.badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.badge-level {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.badge-level.gold {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.badge-level.silver {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.badge-description {
+  font-size: 0.875rem;
+  color: #fff;
+  margin-top: 0.25rem;
+}
+
+.badge-date {
+  font-size: 0.75rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}

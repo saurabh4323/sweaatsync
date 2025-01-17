@@ -7,7 +7,7 @@ export default function Wer() {
   const [seu, setseu] = useState(0);
 
   const toggle = () => {
-    setnum(num - 40);
+    setnum(num - 20);
     setseu(seu + 1);
   };
 

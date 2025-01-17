@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import "./header.css";
 import styles from "./Hero.module.css";
@@ -25,10 +26,10 @@ const Header = () => {
           <Link href="/calories" className="nav-link">
             Calories
           </Link>
-          <Link href="/pricing" className="nav-link">
+          <Link href="/achivement" className="nav-link">
             Achievement
           </Link>
-          <Link href="/blog" className="nav-link">
+          <Link href="/community" className="nav-link">
             Community
           </Link>
           <Link href="/contact" className="nav-link">

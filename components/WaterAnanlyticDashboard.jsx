@@ -120,7 +120,7 @@ const WaterAnalyticsDashboard = () => {
           "linear-gradient(to bottom right, rgba(113, 0, 135, 0.7) 0%, rgba(70, 0, 70, 0.6) 15%, rgb(15, 15, 15) 35%, rgb(15, 15, 15) 65%, rgba(80, 50, 0, 0.5) 85%, rgba(121, 76, 0, 0.7) 100%)",
       }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto mt-[80px]">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-white-800">

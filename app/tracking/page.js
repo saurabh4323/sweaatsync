@@ -4,6 +4,8 @@ import EnhancedWaterTracker from "@/components/Water";
 import Wer from "@/components/Wer";
 import React from "react";
 import Home from "./Z";
+import Bmi from "@/components/Bmi";
+import FitnessTracker from "@/components/FitnessTracker";
 
 export default function page() {
   return (
@@ -28,8 +30,24 @@ export default function page() {
           <EnhancedWaterTracker></EnhancedWaterTracker>
           {/* <Wer></Wer> */}
         </div>
-        <div className="sec" style={{ marginTop: "30px" }}>
+        <div className="sec" style={{ marginTop: "100px" }}>
+          <FitnessTracker></FitnessTracker>
+          {/* <Wer></Wer> */}
+        </div>
+      </div>
+      <div
+        className="biiooiii"
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          marginBottom: "20px",
+        }}
+      >
+        <div className="nio" style={{ marginTop: "-80px" }}>
           <Sleep></Sleep>
+        </div>
+        <div className="isg" style={{ marginRight: "100px" }}>
+          <Bmi></Bmi>
         </div>
       </div>
       <div className="shh" style={{ width: "70%", margin: "auto" }}>
