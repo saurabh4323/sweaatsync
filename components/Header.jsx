@@ -16,10 +16,10 @@ const Header = () => {
           <Link href="/" className="nav-link">
             Home
           </Link>
-          <Link href="/about" className="nav-link">
+          <Link href="/dashboard" className="nav-link">
             DashBoard
           </Link>
-          <Link href="/classes" className="nav-link">
+          <Link href="/tracking" className="nav-link">
             Tracking
           </Link>
           <Link href="/calories" className="nav-link">
@@ -29,7 +29,7 @@ const Header = () => {
             Achievement
           </Link>
           <Link href="/blog" className="nav-link">
-            Games
+            Community
           </Link>
           <Link href="/contact" className="nav-link">
             Profile

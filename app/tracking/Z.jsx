@@ -7,14 +7,13 @@ import "./nutrition-search.css";
 const API_KEY = "E3YHPl5iWS64yerqGOJuM4gniuFgk4uZCDONB7Rz";
 
 const CalorieTracker = ({ calories }) => {
-  const data = parseFloat(localStorage.getItem("calories")) || 0;
+  const data = parseFloat(localStorage.getItem("calories")) || 0; // Parse and provide default value
+  console.log(data);
+
   const [totalCalories, setTotalCalories] = useState(data);
   const [nus, setnus] = useState(5);
   const maxDailyCalories = 2500;
   const percentage = (totalCalories / maxDailyCalories) * 100;
-  useEffect(() => {
-    localStorage.setItem("calories", totalCalories);
-  }, [totalCalories]); // Correct dependency array
 
   const getColor = () => {
     if (percentage <= 35) return "rgb(255, 0, 0)";
@@ -39,14 +38,6 @@ const CalorieTracker = ({ calories }) => {
     >
       <div className="tracker-header">
         <h3 className="tracker-title">Daily Calorie Tracker</h3>
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          onClick={handleAddCalories}
-          className="add-calories-button"
-        >
-          <Plus size={16} />
-          Add to Daily Total
-        </motion.button>
       </div>
 
       <div className="speedometer-container">
@@ -189,123 +180,127 @@ export default function Home() {
   };
 
   return (
-    <main className="main-container">
-      <div
-        className="niih"
-        style={{
-          background:
-            "linear-gradient(to bottom right, rgba(113, 0, 135, 0.7) 0%,rgba(70, 0, 70, 0.6) 15%,rgb(15, 15, 15) 35%,rgb(15, 15,15) 65%, rgba(80, 50, 0, 0.5) 85%, rgba(121, 76, 00.7)100%)",
-          position: "absolute",
-          right: "0",
-          top: "0",
-          width: "100%",
-          minHeight: "220vh",
-          zIndex: -1,
-        }}
-      ></div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="content-wrapper"
-      >
-        <h1 className="page-title">Nutrition Search</h1>
+    <>
+      <main className="main-container" style={{ display: "none" }}>
+        <div
+          className="niih"
+          style={{
+            background:
+              "linear-gradient(to bottom right, rgba(113, 0, 135, 0.7) 0%,rgba(70, 0, 70, 0.6) 15%,rgb(15, 15, 15) 35%,rgb(15, 15,15) 65%, rgba(80, 50, 0, 0.5) 85%, rgba(121, 76, 00.7)100%)",
+            position: "absolute",
+            right: "0",
+            top: "0",
+            width: "100%",
+            minHeight: "220vh",
+            zIndex: -1,
+          }}
+        ></div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="content-wrapper"
+        >
+          <h1 className="page-title">Nutrition Search</h1>
 
-        <div className="search-form">
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="search-input-container"
-          >
-            <input
-              type="text"
-              value={query}
-              onChange={handleInputChange}
-              placeholder="Enter food name (e.g., apple)"
-              className="search-input"
-            />
-            <div className="search-button">
-              <Search size={20} />
-              {loading ? "Analyzing..." : "Search"}
-            </div>
-          </motion.div>
-        </div>
-
-        <AnimatePresence>
-          {error && (
+          <div className="search-form">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="error-message"
+              whileHover={{ scale: 1.02 }}
+              className="search-input-container"
             >
-              {error}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {foodData && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="results-container"
-            >
-              <h2 className="food-title">{foodData.description}</h2>
-
-              <div className="nutrient-grid">
-                {[
-                  { name: "Calories", value: getNutrientValue("Energy") },
-                  { name: "Protein", value: getNutrientValue("Protein") },
-                  {
-                    name: "Carbohydrates",
-                    value: getNutrientValue("Carbohydrate, by difference"),
-                  },
-                  { name: "Fat", value: getNutrientValue("Total lipid (fat)") },
-                ].map((nutrient, index) => (
-                  <motion.div
-                    key={nutrient.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.02 }}
-                    className="nutrient-card"
-                  >
-                    <h3 className="nutrient-name">{nutrient.name}</h3>
-                    <p className="nutrient-value">{nutrient.value}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <CalorieTracker
-                calories={parseFloat(getNutrientValue("Energy"))}
+              <input
+                type="text"
+                value={query}
+                onChange={handleInputChange}
+                placeholder="Enter food name (e.g., apple)"
+                className="search-input"
               />
+              <div className="search-button">
+                <Search size={20} />
+                {loading ? "Analyzing..." : "Search"}
+              </div>
+            </motion.div>
+          </div>
 
+          <AnimatePresence>
+            {error && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="additional-nutrients"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="error-message"
               >
-                <h3 className="section-title">Additional Nutrients</h3>
-                <div className="nutrients-grid">
-                  {foodData.nutrients.map((nutrient, index) => (
+                {error}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence>
+            {foodData && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                className="results-container"
+              >
+                <h2 className="food-title">{foodData.description}</h2>
+
+                <div className="nutrient-grid">
+                  {[
+                    { name: "Calories", value: getNutrientValue("Energy") },
+                    { name: "Protein", value: getNutrientValue("Protein") },
+                    {
+                      name: "Carbohydrates",
+                      value: getNutrientValue("Carbohydrate, by difference"),
+                    },
+                    {
+                      name: "Fat",
+                      value: getNutrientValue("Total lipid (fat)"),
+                    },
+                  ].map((nutrient, index) => (
                     <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.05 }}
-                      className="nutrient-item"
+                      key={nutrient.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="nutrient-card"
                     >
-                      <span className="nutrient-label">{nutrient.name}: </span>
-                      {nutrient.amount.toFixed(1)} {nutrient.unit}
+                      <h3 className="nutrient-name">{nutrient.name}</h3>
+                      <p className="nutrient-value">{nutrient.value}</p>
                     </motion.div>
                   ))}
                 </div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="additional-nutrients"
+                >
+                  <h3 className="section-title">Additional Nutrients</h3>
+                  <div className="nutrients-grid">
+                    {foodData.nutrients.map((nutrient, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                        className="nutrient-item"
+                      >
+                        <span className="nutrient-label">
+                          {nutrient.name}:{" "}
+                        </span>
+                        {nutrient.amount.toFixed(1)} {nutrient.unit}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
-    </main>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </main>
+      <CalorieTracker calories={parseFloat(getNutrientValue("Energy"))} />
+    </>
   );
 }

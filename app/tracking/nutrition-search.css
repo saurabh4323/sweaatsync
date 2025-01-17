@@ -8,7 +8,7 @@
 .calorie-tracker {
   margin: 2rem 0;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgb(255, 255, 255);
   border-radius: 1rem;
   backdrop-filter: blur(10px);
 }
@@ -31,7 +31,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(236, 236, 236);
   border-radius: 0.5rem;
   color: white;
   cursor: pointer;
@@ -55,7 +55,7 @@
   height: 10rem;
   width: 100%;
   border-radius: 10rem 10rem 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(255, 255, 255);
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
 }
 

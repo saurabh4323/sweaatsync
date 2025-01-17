@@ -1,0 +1,125 @@
+{
+  "weeklyData": [
+    {
+      "day": "Monday",
+      "intake": 2100,
+      "target": 2500,
+      "percentage": 84,
+      "morning": 800,
+      "afternoon": 700,
+      "evening": 600,
+      "caffeineWater": 300,
+      "pureWater": 1800,
+      "timestamp": "2025-01-13T00:00:00Z"
+    },
+    {
+      "day": "Tuesday",
+      "intake": 2400,
+      "target": 2500,
+      "percentage": 96,
+      "morning": 900,
+      "afternoon": 800,
+      "evening": 700,
+      "caffeineWater": 400,
+      "pureWater": 2000,
+      "timestamp": "2025-01-14T00:00:00Z"
+    },
+    {
+      "day": "Wednesday",
+      "intake": 1800,
+      "target": 2500,
+      "percentage": 72,
+      "morning": 600,
+      "afternoon": 700,
+      "evening": 500,
+      "caffeineWater": 200,
+      "pureWater": 1600,
+      "timestamp": "2025-01-15T00:00:00Z"
+    },
+    {
+      "day": "Thursday",
+      "intake": 2500,
+      "target": 2500,
+      "percentage": 100,
+      "morning": 1000,
+      "afternoon": 800,
+      "evening": 700,
+      "caffeineWater": 500,
+      "pureWater": 2000,
+      "timestamp": "2025-01-16T00:00:00Z"
+    },
+    {
+      "day": "Friday",
+      "intake": 2300,
+      "target": 2500,
+      "percentage": 92,
+      "morning": 800,
+      "afternoon": 900,
+      "evening": 600,
+      "caffeineWater": 400,
+      "pureWater": 1900,
+      "timestamp": "2025-01-17T00:00:00Z"
+    },
+    {
+      "day": "Saturday",
+      "intake": 1900,
+      "target": 2500,
+      "percentage": 76,
+      "morning": 700,
+      "afternoon": 600,
+      "evening": 600,
+      "caffeineWater": 300,
+      "pureWater": 1600,
+      "timestamp": "2025-01-18T00:00:00Z"
+    },
+    {
+      "day": "Sunday",
+      "intake": 2200,
+      "target": 2500,
+      "percentage": 88,
+      "morning": 800,
+      "afternoon": 700,
+      "evening": 700,
+      "caffeineWater": 350,
+      "pureWater": 1850,
+      "timestamp": "2025-01-19T00:00:00Z"
+    }
+  ],
+  "monthlyData": [
+    {
+      "week": 1,
+      "averageIntake": 2100,
+      "totalIntake": 14700,
+      "completionRate": 84
+    },
+    {
+      "week": 2,
+      "averageIntake": 2300,
+      "totalIntake": 16100,
+      "completionRate": 92
+    },
+    {
+      "week": 3,
+      "averageIntake": 2000,
+      "totalIntake": 14000,
+      "completionRate": 80
+    },
+    {
+      "week": 4,
+      "averageIntake": 2200,
+      "totalIntake": 15400,
+      "completionRate": 88
+    }
+  ],
+  "goals": {
+    "dailyTarget": 2500,
+    "weeklyTarget": 17500,
+    "monthlyTarget": 75000
+  },
+  "preferences": {
+    "reminderFrequency": "hourly",
+    "startTime": "08:00",
+    "endTime": "22:00",
+    "measurement": "ml"
+  }
+}
