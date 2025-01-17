@@ -7,7 +7,10 @@ import "./nutrition-search.css";
 const API_KEY = "E3YHPl5iWS64yerqGOJuM4gniuFgk4uZCDONB7Rz";
 
 const CalorieTracker = ({ calories }) => {
-  const data = parseFloat(localStorage.getItem("calories")) || 0; // Parse and provide default value
+  let data = 0;
+  if (typeof window !== "undefined") {
+    data = parseFloat(localStorage.getItem("calories")) || 0;
+  } // Parse and provide default value
   console.log(data);
 
   const [totalCalories, setTotalCalories] = useState(data);
