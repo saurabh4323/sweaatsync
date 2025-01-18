@@ -175,7 +175,7 @@ const Achievement = () => {
             </div>
           ))}
         </div>
-
+        {/* 
         <div className="activity-card">
           <div className="activity-header">
             <h2 className="activity-title">Activity History</h2>
@@ -197,7 +197,7 @@ const Achievement = () => {
             </div>
           </div>
           <div className="activity-grid">{renderActivityGrid()}</div>
-        </div>
+        </div> */}
 
         <div className="badges-card">
           <h2 className="badges-title">Achievements Showcase</h2>

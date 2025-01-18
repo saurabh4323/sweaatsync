@@ -53,16 +53,16 @@ const FitbitDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Fitbit Health Dashboard
+            {/* Fitbit Health Dashboard */}
           </h1>
           {!healthData && !loading && (
             <button
               onClick={handleLogin}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-pink-700 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Connect with Fitbit
             </button>
@@ -82,12 +82,14 @@ const FitbitDashboard = () => {
         )}
 
         {healthData && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Steps Card */}
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
                 <Activity className="w-6 h-6 text-blue-600 mr-2" />
-                <h2 className="text-xl font-semibold">Daily Steps</h2>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Daily Steps
+                </h2>
               </div>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
@@ -108,10 +110,12 @@ const FitbitDashboard = () => {
             </div>
 
             {/* Heart Rate Card */}
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
                 <Heart className="w-6 h-6 text-red-600 mr-2" />
-                <h2 className="text-xl font-semibold">Heart Rate</h2>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Heart Rate
+                </h2>
               </div>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">

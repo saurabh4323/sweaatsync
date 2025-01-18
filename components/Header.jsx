@@ -2,7 +2,16 @@
 import Link from "next/link";
 import "./header.css";
 import styles from "./Hero.module.css";
+import { useEffect, useState } from "react";
+import { Email } from "@mui/icons-material";
 const Header = () => {
+  const [done, setdone] = useState(false);
+  useEffect(() => {
+    const data = localStorage.getItem("email");
+    if (data) {
+      setdone(true);
+    }
+  }, []);
   return (
     <header className="header">
       <div className="container">
@@ -32,9 +41,15 @@ const Header = () => {
           <Link href="/community" className="nav-link">
             Community
           </Link>
-          <Link href="/contact" className="nav-link">
-            Profile
-          </Link>
+          {done ? (
+            <Link href="/profile" className="nav-link">
+              Profile
+            </Link>
+          ) : (
+            <Link href="/register" className="nav-link">
+              Register
+            </Link>
+          )}
         </nav>
       </div>
     </header>
